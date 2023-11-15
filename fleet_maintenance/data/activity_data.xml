@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mail_act_fleet_maintenance" model="mail.activity.type">
+            <field name="name">Maintenance Service to perform</field>
+            <field name="icon">fa-wrench</field>
+<!--            <field name="res_model_id" ref="fleet.model_fleet_vehicle"/> v14 -->
+				<field name="res_model">fleet.vehicle</field>
+        </record>
+	</data>
+</odoo>

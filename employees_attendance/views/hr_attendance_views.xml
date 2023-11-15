@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--<link rel="stylesheet" href="http://127.0.0.1:8069/employees_attendance/static/src/css/custom_styles.css"/>-->
+        <record id="view_attendance_tree" model="ir.ui.view">
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
+            <field name="arch" type="xml">
+
+
+                <!--<field name="open_worked_hours" position="replace"/> -->
+
+                <field name="employee_id" position="before">
+                    <field name="day"/>
+                </field>
+                <field name="employee_id" position="after">
+                    <field name="diff_value" invisible="1" class="non-container"/>
+                    <field name="summary" widget="html" class="custom-container"/>
+                </field>
+                <field name="check_out" position="after">
+                    <field name="difference" class="custom-container" attrs="{'invisible': [('diff_value', '=', False)]}"  options='{"fg_color": "red: diff_value &lt; 0; green: diff_value &gt; 0; "}'/>
+                    <button name="print_user_attendance_report" string="Descargar Asistencias" type="object" class="btn-primary"/>
+
+                </field>
+
+            </field>
+        </record>
+        <record id="action_report_hr_attendance" model="ir.actions.report">
+            <field name="name">Reporte de Asistencia</field>
+            <field name="model">hr.attendance</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">employees_attendance.report_hr_attendance</field>
+            <field name="report_file">employees_attendance.report_hr_attendance</field>
+        </record>
+
+        <record id="view_hr_attendance_form" model="ir.ui.view">
+            <field name="name">hr.attendance.form</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form"/>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <footer>
+                            <!-- Botón Descargar Asistencias -->
+                            <button name="print_user_attendance_report" string="Descargar Asistencias" type="object" class="btn-primary"/>
+                            <!-- Otros botones que puedas tener -->
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+		<record id="product_uom_month" model="uom.uom">
+	    	<field name="name">Meses</field>
+	      	<field name="category_id" ref="uom.uom_categ_wtime" />
+	      	<field name="factor">0.033</field>
+	      	<field name="factor_inv">30</field>
+	      	<field name="rounding">0.01</field>
+	      	<field name="uom_type">bigger</field>
+		</record>
+	      
+	     <record id="product_uom_year" model="uom.uom">
+	      	<field name="name">Años</field>
+	      	<field name="category_id" ref="uom.uom_categ_wtime" />
+	      	<field name="factor">0.0027</field>
+	      	<field name="factor_inv">365</field>
+	      	<field name="rounding">0.001</field>
+	      	<field name="uom_type">bigger</field>
+	      </record>
+	       
+	</data>
+</odoo>

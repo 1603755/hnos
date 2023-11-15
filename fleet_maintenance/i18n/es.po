@@ -1,0 +1,505 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fleet_maintenance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-24 10:02+0000\n"
+"PO-Revision-Date: 2022-11-24 10:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "<span>by dates in</span>"
+msgstr "<span>por fechas en</span>"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "<span>by usage in</span>"
+msgstr "<span>por uso en</span>"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "<span>months</span>"
+msgstr "<span>meses</span>"
+
+#. module: fleet_maintenance
+#: model:uom.uom,name:fleet_maintenance.product_uom_year
+msgid "Años"
+msgstr "Años"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_vehicle_model__vehicle_type__bike
+msgid "Bike"
+msgstr "Bicicleta"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_vehicle_model__vehicle_type__car
+msgid "Car"
+msgstr "Coche"
+
+#. module: fleet_maintenance
+#: model_terms:ir.actions.act_window,help:fleet_maintenance.fleet_maintenance_plan_action
+msgid "Create a new mainenance plan"
+msgstr "Crear un nuevo plan de mantenimiento"
+
+#. module: fleet_maintenance
+#: model_terms:ir.actions.act_window,help:fleet_maintenance.fleet_vehicle_running_time_action
+msgid "Create a new running time log"
+msgstr "Crear un nuevo registro de tiempo de uso"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "Create service"
+msgstr "Crear servicio"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__create_uid
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__create_uid
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__create_date
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__create_date
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__display_name
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__display_name
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services__display_name
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_model__display_name
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_odometer__display_name
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__driver_id
+msgid "Driver"
+msgstr "Conductor"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle_running_time__driver_id
+msgid "Driver of the vehicle"
+msgstr "Conductor del vehículo"
+
+#. module: fleet_maintenance
+#: model_terms:ir.actions.act_window,help:fleet_maintenance.fleet_maintenance_plan_action
+msgid "Every vehicle model can have a maintenance plan."
+msgstr "Cada vehiculo puede tener un plan de mantenimiento."
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_service_type
+msgid "Fleet Service Type"
+msgstr "Tipo de servicio"
+
+#. module: fleet_maintenance
+#: model:ir.actions.server,name:fleet_maintenance.ir_cron_fleet_maintenance_checker_ir_actions_server
+#: model:ir.cron,cron_name:fleet_maintenance.ir_cron_fleet_maintenance_checker
+#: model:ir.cron,name:fleet_maintenance.ir_cron_fleet_maintenance_checker
+msgid "Fleet: Generate activities based on maintenance plans"
+msgstr "Flota: Generar actividades en base a los planes de mantenimiento"
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_vehicle_log_fuel
+msgid "Fuel log for vehicles"
+msgstr "Registro de combustible para vehículos"
+
+#. module: fleet_maintenance
+#: model:res.partner.category,name:fleet_maintenance.gas_station_partner
+msgid "Gas stations"
+msgstr "Gasolineras"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_maintenance_plan_view_search
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_running_time_view_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__id
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__id
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services__id
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_model__id
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_odometer__id
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__id
+msgid "ID"
+msgstr "Id"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_running_time_view_kanban
+msgid "Km"
+msgstr "km"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan____last_update
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line____last_update
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services____last_update
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_model____last_update
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_odometer____last_update
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time____last_update
+msgid "Last Modified on"
+msgstr "Última odificación el"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__running_time
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services__running_time
+msgid "Last Running Time"
+msgstr "Último registro de uso"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__write_uid
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__write_uid
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__write_date
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__write_date
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__maintenance_plan
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services__maintenance_plan
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_model__maintenance_plan
+msgid "Maintenance Plan"
+msgstr "Plan de mantenimiento"
+
+#. module: fleet_maintenance
+#: model:mail.activity.type,name:fleet_maintenance.mail_act_fleet_maintenance
+msgid "Maintenance Service to perform"
+msgstr "Servicio de mantenimiento a efectuar"
+
+#. module: fleet_maintenance
+#: code:addons/fleet_maintenance/models/fleet_vehicle.py:0
+#, python-format
+msgid "Maintenance on vehicle is required soon."
+msgstr "Hay que hacer pronto el mantenimiento del vehículo."
+
+#. module: fleet_maintenance
+#: code:addons/fleet_maintenance/models/fleet_vehicle.py:0
+#, python-format
+msgid "Maintenance on vehicle is required."
+msgstr "Es necesario hacer el mantenimiento del vehículo."
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__plan
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_maintenance_plan_view_form
+msgid "Maintenance plan"
+msgstr "Plan de mantenimiento"
+
+#. module: fleet_maintenance
+#: model:ir.actions.act_window,name:fleet_maintenance.fleet_maintenance_plan_action
+#: model:ir.ui.menu,name:fleet_maintenance.fleet_maintenance_plan_menu
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_maintenance_plan_view_search
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_maintenance_plan_view_tree
+msgid "Maintenance plans"
+msgstr "Planes de mantenimiento"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_maintenance_plan_graph
+msgid "Maintenance plans per vehicle model"
+msgstr "Planes de mantenimiento por modelo de vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__maintenance_type
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__maintenance_type
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__maintenance_type
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services__maintenance_type
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_model__maintenance_type
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_maintenance_plan_view_search
+msgid "Maintenance type"
+msgstr "Tipo de mantenimiento"
+
+#. module: fleet_maintenance
+#: model:uom.uom,name:fleet_maintenance.product_uom_month
+msgid "Meses"
+msgstr "Meses"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services__model_id
+msgid "Model"
+msgstr "Modelo"
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_vehicle_model
+msgid "Model of a vehicle"
+msgstr "Modelo de vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle_log_services__model_id
+msgid "Model of the vehicle"
+msgstr "Modelo de vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__models
+msgid "Models"
+msgstr "Modelos"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_maintenance_plan_line__periodicity_unit
+msgid "Months and years relate to elapsed time."
+msgstr "Meses y años en cuanto al tiempo transcurrido."
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__name
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: fleet_maintenance
+#: code:addons/fleet_maintenance/models/fleet_vehicle.py:0
+#, python-format
+msgid "New odometer value (%d) cannot be less than existing one (%d)."
+msgstr "El nuevo valor del odómetro (%d) no puede ser menor que el existente (%d)."
+
+#. module: fleet_maintenance
+#: code:addons/fleet_maintenance/models/fleet_vehicle.py:0
+#, python-format
+msgid "New running time value (%d) cannot be less than existing one (%d)."
+msgstr "El nuevo valor del registro de tiempo de uso (%d) no puede ser menor que el existente (%d)."
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__next_service_unit_usage
+msgid "Next Service Unit Usage"
+msgstr "Unidad de próximo servicio por uso"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__next_service_value_date
+msgid "Next Service Value Date"
+msgstr "Fecha del próximo servicio por fechas"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__next_service_value_usage
+msgid "Next Service Value Usage"
+msgstr "Valor del próximo servicio por uso"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__next_service_date
+msgid "Next service by date"
+msgstr "Próximo servicio por fechas"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__next_service_usage
+msgid "Next service by usage"
+msgstr "Próximo servicio por uso"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "Next services"
+msgstr "Próximos servicios"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_vehicle_model__maintenance_type__none
+msgid "None"
+msgstr "Ninguno"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_maintenance_plan__maintenance_type__odometer
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_vehicle_model__maintenance_type__odometer
+msgid "Odometer"
+msgstr "Odómetro"
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_vehicle_odometer
+msgid "Odometer log for a vehicle"
+msgstr "Registro de distancia recorrida por el vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_vehicle_model__vehicle_type__other
+msgid "Other"
+msgstr "Otro"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__periodicity
+msgid "Periodicity"
+msgstr "Periodicidad"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__periodicity_unit
+msgid "Periodicity Unit"
+msgstr "Unidad de periodicidad"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__periodicity_unit_domain
+msgid "Periodicity Unit Domain"
+msgstr ""
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan__maintenance_lines
+msgid "Plan lines"
+msgstr "Líneas del plan"
+
+#. module: fleet_maintenance
+#: model:fleet.service.type,name:fleet_maintenance.type_service_refueling
+msgid "Repostaje"
+msgstr "Repostaje"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__running_time_unit
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_services__running_time_unit
+msgid "Runing Time Unit"
+msgstr "Unidad de control por tiempo de uso"
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_vehicle_running_time
+msgid "Runing time log for a vehicle"
+msgstr "Resgitro de tiempo de uso del vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.actions.act_window,name:fleet_maintenance.fleet_vehicle_running_time_action
+#: model:ir.ui.menu,name:fleet_maintenance.fleet_vehicle_running_time_menu
+msgid "Running Time"
+msgstr "Tiempo de uso"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_running_time_view_form
+msgid "Running Time Logs"
+msgstr "Registros de tiempo de uso"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle__running_time_count
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_maintenance_plan__maintenance_type__running_time
+#: model:ir.model.fields.selection,name:fleet_maintenance.selection__fleet_vehicle_model__maintenance_type__running_time
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "Running time"
+msgstr "Tiempo de uso"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_running_time_view_tree
+msgid "Running time Logs"
+msgstr "Registros de tiempo de uso"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_running_time_view_graph
+msgid "Running time Values Per Vehicle"
+msgstr "Valores de tiempo de uso por vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle__running_time
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle_log_services__running_time
+msgid "Running time measure of the vehicle at the moment of this log"
+msgstr "Medida del tiempo de uso del vehículo en el momento de este registro"
+
+#. module: fleet_maintenance
+#: code:addons/fleet_maintenance/models/fleet_vehicle.py:0
+#, python-format
+msgid "Service"
+msgstr "Servicio"
+
+#. module: fleet_maintenance
+#: code:addons/fleet_maintenance/models/fleet_vehicle.py:0
+#: code:addons/fleet_maintenance/models/fleet_vehicle.py:0
+#, python-format
+msgid "Service \"%s\" at %s %s"
+msgstr "Servicio \"%s\" a %s %s"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_log_fuel__service_type_id
+msgid "Service Type"
+msgstr "Tipo de servicio"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_maintenance_plan_line__service_type
+msgid "Service type"
+msgstr "Tipo de servicio"
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr "Servicios para vehículos"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__value
+msgid "Time Value"
+msgstr "Valor temporal"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_maintenance_plan__maintenance_type
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_maintenance_plan_line__maintenance_type
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle__maintenance_type
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle_log_services__maintenance_type
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle_model__maintenance_type
+msgid "Type of maintenance for the vehicle"
+msgstr "Tipo de mantenimiento del vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__unit
+msgid "Unit"
+msgstr "Unidad"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle__running_time_unit
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle_log_services__running_time_unit
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle_running_time__unit
+msgid "Unit of the running time counter"
+msgstr "Unidad del contador de tiempo de uso"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,help:fleet_maintenance.field_fleet_vehicle__next_service_value_date
+msgid "Value in months"
+msgstr "Valor en meses"
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_vehicle
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_odometer__vehicle_id
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_running_time__vehicle_id
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_running_time_view_search
+msgid "Vehicle"
+msgstr "Vehículo"
+
+#. module: fleet_maintenance
+#: model:ir.model.fields,field_description:fleet_maintenance.field_fleet_vehicle_model__vehicle_type
+msgid "Vehicle Type"
+msgstr "Tipo de vehículo"
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_running_time_view_search
+msgid "Vehicles running time"
+msgstr "Tiempo de uso de los vehículos"
+
+#. module: fleet_maintenance
+#: model_terms:ir.actions.act_window,help:fleet_maintenance.fleet_vehicle_running_time_action
+msgid "You can add various running time entries for all vehicles."
+msgstr "Puedes añadir varias entradas de tiempo de uso para todos los vehículos."
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_maintenance_plan
+msgid "fleet.maintenance.plan"
+msgstr ""
+
+#. module: fleet_maintenance
+#: model:ir.model,name:fleet_maintenance.model_fleet_maintenance_plan_line
+msgid "fleet.maintenance.plan.line"
+msgstr ""
+
+#. module: fleet_maintenance
+#: model_terms:ir.ui.view,arch_db:fleet_maintenance.fleet_vehicle_runningtime_view_form
+msgid "show the running time logs for this vehicle"
+msgstr "mostrar los registros de tiempo de uso para este vehículo"

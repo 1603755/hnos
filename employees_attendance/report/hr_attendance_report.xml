@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_hr_attendance">
+            <t t-call="web.html_container">
+                <t t-set="page_title">Assistance Report</t>
+                <link rel="stylesheet" href="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/css/custom_styles.css"/>
+                <body>
+                    <h1 class="custom-container" style="font-size: 2em; margin-bottom: 0px;">Report Assistance</h1>
+                    <t t-if="len(form) != 0">
+                        <h3 class="custom-container">Worked hours by <span t-esc="form[0]['employee_id'][1]"/> at <span t-esc="form[0]['check_in']"/></h3>
+                    </t>
+                    <table class="content-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre del Empleado</th>
+                                <th>Resumen</th>
+                                <th>Horas Trabajadas</th>
+                                <th>Horas Faltantes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="form" t-as="attendance">
+                                <tr>
+                                    <td><span t-esc="attendance['employee_id'][1]"/></td>
+                                    <td>
+                                        <t t-foreach="range(0, len(attendance['summary']))" t-as="index">
+                                             <t t-if="index % 4 == 0">
+                                                <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/in.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1em;"/></span>
+                                                <span t-esc="attendance['summary'][index]"/>
+                                             </t>
+                                            <t t-if="index % 4 == 1">
+                                                <t t-if="attendance['summary'][index] == 'presencial'">
+                                                    <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/presencial.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1em;"/></span>
+                                                </t>
+                                                <t t-if="attendance['summary'][index] == 'online'">
+                                                    <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/online.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1.5em;"/></span>
+                                                </t>
+                                            </t>
+                                            <t t-if="index % 4 == 2">
+                                                <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/out.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1em;"/></span>
+                                                <span t-esc="attendance['summary'][index]"/>
+                                            </t>
+                                            <t t-if="index % 4 == 3">
+                                                <span t-esc="attendance['summary'][index]"/>
+                                                <br/>
+                                            </t>
+                                        </t>
+                                    </td>
+                                    <td><span t-esc="round(attendance['worked_hours'],2)"/></td>
+                                    <td><span t-esc="attendance['difference']"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </body>
+            </t>
+        </template>
+    </data>
+</odoo>

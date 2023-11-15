@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+	
+		<record id='fleet_vehicle_model_maintenance_view_form' model='ir.ui.view'>
+	        <field name="name">fleet.vehicle.model.maintenance.form</field>
+	        <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_form"/>
+	        <field name="model">fleet.vehicle.model</field>
+	        <field name="arch" type="xml">
+	         	<field name="vehicle_type" position="after">
+	        		<field name="maintenance_type" />
+	        		<field name="maintenance_plan" domain="[('maintenance_type','=',maintenance_type)]"/>
+	        	</field>
+	        </field>
+		</record>
+		
+	    <record id='fleet_vehicle_model_maintenance_view_tree' model='ir.ui.view'>
+	        <field name="name">fleet.vehicle.model.maintenance.tree</field>
+	        <field name="model">fleet.vehicle.model</field>
+	        <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_tree"/>
+	        <field name="arch" type="xml">
+	        	<field name="vehicle_type" position="after">
+	        		<field name="maintenance_plan" />
+	        		<field name="maintenance_type" />
+	        	</field>
+	        </field>
+		</record>
+
+	</data>
+</odoo>

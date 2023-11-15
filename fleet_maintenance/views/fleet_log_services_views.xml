@@ -1,0 +1,48 @@
+<odoo>
+	<data>
+		<record id='fleet_vehicle_log_services_runningtime_view_form' model='ir.ui.view'>
+        	<field name="name">fleet.vehicle.log.services.run.form</field>
+        	<field name="model">fleet.vehicle.log.services</field>
+        	<field name="inherit_id" ref="fleet.fleet_vehicle_log_services_view_form"/>
+        	<field name="arch" type="xml">
+        		<field name="service_type_id" position="before">
+        			<field name="model_id" invisible='1'/>
+        		</field>
+	       		<field name="service_type_id" position="replace">
+        			<field name="service_type_id" domain="[('models','=',model_id)]" />
+        		</field>
+                <xpath expr="//label[@for='odometer']" position="before">
+                	<field name="maintenance_plan" />
+                	<field name="maintenance_type" />
+                </xpath>
+                <xpath expr="//label[@for='odometer']" position="attributes">
+                	<attribute name="attrs">{'invisible':[('maintenance_type','!=','odometer')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='odometer']/ancestor::div" position="attributes">
+                	<attribute name="attrs">{'invisible':[('maintenance_type','!=','odometer')]}</attribute>
+                </xpath>
+               	<xpath expr="//field[@name='odometer']/ancestor::div" position="after">
+               		<label for="running_time" attrs="{'invisible': [('maintenance_type', '!=', 'running_time')]}"/>
+                    <div class="o_row" attrs="{'invisible': [('maintenance_type', '!=', 'running_time')]}">
+                        <field name="running_time"/>
+                        <field name="running_time_unit"/>
+                    </div>
+                </xpath>
+        	</field>
+    	</record>
+    	
+    	<record id='fleet_vehicle_log_fuel_contact_domain_view_form' model='ir.ui.view'>
+        	<field name="name">fleet.vehicle.log.fuel.contact.domain.view.form</field>
+        	<field name="model">fleet.vehicle.log.fuel</field>
+        	<field name="inherit_id" ref="fleet_vehicle_log_fuel.fleet_vehicle_log_fuel_view_form"/>
+        	<field name="arch" type="xml">
+        		<field name="vendor_id" position="replace">
+        			<field name="vendor_id" domain="[('category_id','=',%(gas_station_partner)d)]" />
+        		</field>
+        		<xpath expr="//label[@for='odometer']" position="replace">
+        			<label for="odometer" string="Valor del cuentakilómetros" />
+        		</xpath>
+    		</field>
+    	</record>
+	</data>
+</odoo>

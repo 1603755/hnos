@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+		<record id="gas_station_partner" model="res.partner.category">
+	    	<field name="name">Gas stations</field>
+		</record>  
+	</data>
+</odoo>

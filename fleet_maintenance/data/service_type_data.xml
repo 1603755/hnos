@@ -1,0 +1,8 @@
+<odoo>
+	<data>
+		<record id="type_service_refueling" model="fleet.service.type">
+	    	<field name="name">Repostaje</field>
+	      	<field name="category">fuel</field>
+		</record>  
+	</data>
+</odoo>
