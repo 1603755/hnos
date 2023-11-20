@@ -25,23 +25,15 @@
                                     <td><span t-esc="attendance['employee_id'][1]"/></td>
                                     <td>
                                         <t t-foreach="range(0, len(attendance['summary']))" t-as="index">
-                                             <t t-if="index % 4 == 0">
+                                             <t t-if="index % 3 == 0">
                                                 <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/in.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1em;"/></span>
                                                 <span t-esc="attendance['summary'][index]"/>
                                              </t>
-                                            <t t-if="index % 4 == 1">
-                                                <t t-if="attendance['summary'][index] == 'presencial'">
-                                                    <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/presencial.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1em;"/></span>
-                                                </t>
-                                                <t t-if="attendance['summary'][index] == 'online'">
-                                                    <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/online.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1.5em;"/></span>
-                                                </t>
-                                            </t>
-                                            <t t-if="index % 4 == 2">
+                                            <t t-if="index % 3 == 1">
                                                 <span><img src="https://odoo.encofradosrodriguez.com/employees_attendance/static/src/icons/out.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1em;"/></span>
                                                 <span t-esc="attendance['summary'][index]"/>
                                             </t>
-                                            <t t-if="index % 4 == 3">
+                                            <t t-if="index % 3 == 2">
                                                 <span t-esc="attendance['summary'][index]"/>
                                                 <br/>
                                             </t>

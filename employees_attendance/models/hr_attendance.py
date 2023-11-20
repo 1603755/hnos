@@ -104,19 +104,6 @@ class HrAttendance(models.Model):
                 vals['summary'] += Markup(f"{icon_in_html} {pytz.utc.localize(vals['check_in']).astimezone(user_tz).strftime('%H:%M')}")
 
         if vals.get('check_out'):
-            if self.check_in_latitude_text and self.check_in_longitude_text:
-                try:
-                    latitude_decimal, longitude_decimal = coordenadas_a_numeros(self.check_in_latitude_text, self.check_in_longitude_text)
-                    location_address = get_location_from_coordinates(latitude_decimal, longitude_decimal)
-                    work_location = self.env['hr.work.location'].search([('id', '=', self.employee_id.work_location_id.id)], limit=1)
-                    if location_address == work_location.name:
-                        presencial_icon_html = Markup('<img src="/employees_attendance/static/src/icons/presencial.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1em;"/>')
-                        vals['summary'] += Markup(f" &nbsp; {presencial_icon_html} &nbsp;")
-                    else:
-                        online_icon_html = Markup('<img src="/employees_attendance/static/src/icons/online.png" alt="My Icon" style="vertical-align: middle; margin-right: 5px; max-height: 1.5em;"/>')
-                        vals['summary'] += Markup(f"&nbsp; {online_icon_html} &nbsp;")
-                except ValueError:
-                    vals['summary'] += Markup(f"&nbsp;<b>Unknown</b>&nbsp;")
             vals['summary'] += Markup(f"{icon_out_html} {pytz.utc.localize(vals['check_out']).astimezone(user_tz).strftime('%H:%M')}  ")
             vals['summary'] += Markup(f" &nbsp; &nbsp; <b> {datetime_to_difference(self.check_in, vals['check_out'])} </b> <br/>")
 
@@ -187,13 +174,6 @@ class HrAttendance(models.Model):
                 if image and ('in.png' in image['src'] or 'out.png' in image['src']):
                     continue
 
-                if image and ('presencial' in image['src']):
-                    rows.append("presencial")
-                elif image and ('online' in image['src']):
-                    rows.append("online")
-                else:
-                    rows.append("unknown")
-
             attendance['summary'] = remove_html_markup(attendance['summary']).replace('\xa0', ' ').split('  ')
             attendance['summary'] = list(filter(lambda item: item != '', attendance['summary']))
             if len(attendance['summary'])/3 == len(rows):
@@ -209,44 +189,6 @@ class HrAttendance(models.Model):
         }
         return self.env.ref('employees_attendance.action_report_hr_attendance').report_action(self, data=data)
 
-def get_location_from_coordinates(latitud, longitud):
-    geolocator = Nominatim(user_agent="geocoding_app")
-    coordenadas = f"{latitud}, {longitud}"
-    try:
-        location = geolocator.reverse(coordenadas, exactly_one=True, language="es")
-        if location:
-            # Location format ej: les Casetes d'en Mussons, Òdena, Anoia, Barcelona, Cataluña, 08700, España
-            # Solo se coje la calle
-            return location.address.split(",")[0]
-        else:
-            return "Dirección no encontrada para estas coordenadas."
-    except Exception as e:
-        return f"Error: {str(e)}"
-
-
-def coordenadas_a_numeros(latitud_str, longitud_str):
-    # Función para convertir una coordenada de grados, minutos y segundos a un número decimal
-    def grados_minutos_segundos_a_decimal(grados, minutos, segundos):
-        return grados + minutos / 60 + segundos / 3600
-
-    # Dividir las cadenas de coordenadas en grados, minutos y segundos
-    latitud_parts = latitud_str.split()
-    longitud_parts = longitud_str.split()
-
-    # Obtener los valores de grados, minutos y segundos para latitud y longitud
-    latitud_grados = float(latitud_parts[1][:-1])  # Excluir el último carácter (º)
-    latitud_minutos = float(latitud_parts[2][:-1])  # Excluir el último carácter (')
-    latitud_segundos = float(latitud_parts[3][:-1])  # Excluir el último carácter (')
-
-    longitud_grados = float(longitud_parts[1][:-1])  # Excluir el último carácter (º)
-    longitud_minutos = float(longitud_parts[2][:-1])  # Excluir el último carácter (')
-    longitud_segundos = float(longitud_parts[3][:-1])  # Excluir el último carácter (')
-
-    # Calcular los valores numéricos para latitud y longitud
-    latitud_numerica = grados_minutos_segundos_a_decimal(latitud_grados, latitud_minutos, latitud_segundos)
-    longitud_numerica = grados_minutos_segundos_a_decimal(longitud_grados, longitud_minutos, longitud_segundos)
-
-    return latitud_numerica, longitud_numerica
 
 def datetime_to_difference(datetime1, datetime2):
     # make tehr rest of the two datetimes , and look if are seconds, minutes, or hours

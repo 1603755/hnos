@@ -19,7 +19,7 @@
                 </field>
                 <field name="check_out" position="after">
                     <field name="difference" class="custom-container" attrs="{'invisible': [('diff_value', '=', False)]}"  options='{"fg_color": "red: diff_value &lt; 0; green: diff_value &gt; 0; "}'/>
-                    <button name="print_user_attendance_report" string="Descargar Asistencias" type="object" class="btn-primary"/>
+                    <button name="print_user_attendance_report" string="Descargar Asistencia" type="object" class="btn-primary"/>
 
                 </field>
 
@@ -42,7 +42,7 @@
                     <sheet>
                         <footer>
                             <!-- Botón Descargar Asistencias -->
-                            <button name="print_user_attendance_report" string="Descargar Asistencias" type="object" class="btn-primary"/>
+                            <button name="print_user_attendance_report" string="Descargar Asistencia" type="object" class="btn-primary"/>
                             <!-- Otros botones que puedas tener -->
                         </footer>
                     </sheet>
